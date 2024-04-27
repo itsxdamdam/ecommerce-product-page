@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* RESETS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SETTING TYPOGRAPHY */
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* colors */
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(229, 33%, 94%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Blue: hsl(240, 100%, 50%)
+}
+
+.container {
+  margin: 50px auto;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 35px;
+  border-bottom: 2px var(--Light-grayish-blue) solid;
+}
+
+.navbar img {
+  cursor: pointer;
+}
+
+.navbar-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: var(--Dark-grayish-blue);
+  text-align: center;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: var(--Blue);
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8%;
+}
+
+.navbar-right .avatar{
+  width: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px;
+}
+
+main .item img {
+  width: 500px; 
+  height: 500px;
+  border-radius: 20px;
+}
+
+.item-details {
+  width: 40%;
+  /* word-wrap: break-word; */
+}
+
+.item-details .company {
+  text-transform:uppercase;
+  color: var(--Orange);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.item-details .item-name {
+  margin: 20px 0px;
+  font-size: 3rem;
+}
+
+.item-details p {
+  color: var(--Dark-grayish-blue);
+}
+
+.item-details .price {
+  display: flex;
+  align-items: center;
+}
+
+.item-details .price-tag {
+  margin: 20px 0px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Black);
+}
+
+.item-details .percent {
+  font-size: 16px;
+  color: var(--Orange);
+  background: var(--Pale-orange);
+  font-weight: 900;
+  padding: 5px 10px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.item-details .old-price {
+  color: var(--Grayish-blue);
+  font-weight: 900;
+  text-decoration: line-through;
+}
