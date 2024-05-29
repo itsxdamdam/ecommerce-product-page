@@ -32,13 +32,25 @@
         </div>
         </div>
       <div class="navbar-right">
-        <img src="./images/icon-cart.svg" alt="cart">
+        <div id="cart">
+          <img src="./images/icon-cart.svg" alt="cart">
+          <div class="cart-notification">
+            <p class="notification-head">Cart</p>
+          </div>
+        </div>
+        
         <img class="avatar" src="./images/image-avatar.png" alt="cart">
       </div>
     </nav>
     <main>
       <div class="item">
         <img src="./images/image-product-1.jpg" alt="product">
+        <div class="thumbnail">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail">
+        </div>
       </div>
       <div class="item-details">
         <p class="company">Sneaker Company</p>
@@ -54,11 +66,25 @@
           <p class="percent">50%</p>
         </div>
         <p class="old-price">$250.00</p>
+        <div class="order-buttons">
+          <div class="quantity-btn">
+            <button id="minus">
+              <img src="./images/icon-minus.svg" alt="minus-sign">
+            </button>
+            <span id="quantity">0</span>
+            <button id="plus">
+              <img src="./images/icon-plus.svg" alt="plus-sign">
+            </button>
+          </div>
+          <button id="addtocart">
+            <img src="./images/icon-cart.svg" alt="cart">
+            <p>Add to cart</p>
+          </button>
+        </div>
       </div>
     </main>
   </div>
-  0
-  Add to cart
+  <script src="controller.js"></script>
 </body>
 </html>
      
