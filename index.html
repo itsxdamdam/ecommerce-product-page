@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="./style.css">
   
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>E-commerce product page</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -36,11 +34,12 @@
       <div class="navbar-right">
         <div id="cart">
           <img src="./images/icon-cart.svg" alt="cart">
-          <div class="cart-notification">
+          <div class="cart-notification">0</div>
+          <div class="cart-list">
             <p class="cartbody-head">Cart</p>
-            <p class="cart-body">
-              Your cart is empty.
-            </p>
+            <div class="cart-body">
+              
+            </div>
           </div>
         </div>
         
@@ -89,7 +88,8 @@
       </div>
     </main>
   </div>
-  <script src="controller.js"></script>
+  <script type="module" src="controller.js"></script>
+  <script type="module" src="view.js"></script>
 </body>
 </html>
      

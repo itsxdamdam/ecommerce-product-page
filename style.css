@@ -27,6 +27,17 @@ body {
   --Blue: hsl(240, 100%, 50%)
 }
 
+/* utilities */
+
+.hidden {
+  display: none;
+}
+
+.bold {
+  font-weight: 800;
+  color: var(--Black);
+}
+
 /* Buttons */
 .quantity-btn button {
   padding: 10px 20px;
@@ -74,7 +85,25 @@ body {
   position: relative;
 }
 
-#cart .cart-notification {
+#cart > img {
+  width: 30px;
+  height: 30px;
+}
+
+.cart-notification {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 0px 9px;
+  background: var(--Orange);
+  color: var(--White);
+  font-weight: 600;
+  border-radius: 45%;
+  text-align: center;
+  z-index: 1;
+}
+
+#cart .cart-list {
   position: absolute;
   top: 50px;
   right: -200px;
@@ -83,23 +112,42 @@ body {
   border-radius: 15px;
   background: var(--White);
   box-shadow: 0px 10px 10px 15px var(--Light-grayish-blue);
+  transition: .3s;
+  z-index: 1;
 }
 
-.cart-notification p:first-child {
+.cart-list > p {
   padding: 20px 30px;
   font-weight: 800;
-  border-bottom: 1px solid var(--Light-grayish-blue);
+  border-bottom: 2px solid var(--Light-grayish-blue);
+  transition: .5s;
+
 }
 
 .cart-body {
   color: var(--Dark-grayish-blue);
   font-weight: 600;
   padding: 10px;
-  /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120px;
+  transition: .5s;
+}
+
+.cart-body-item {
+  color: var(--Dark-grayish-blue);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .5s;
+}
+
+.cart-body-item > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
 }
 
 button {
