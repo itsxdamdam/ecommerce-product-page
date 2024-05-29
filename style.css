@@ -130,7 +130,6 @@ a {
 
 .navbar-left {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 40%;
   height: 100%;
@@ -139,23 +138,18 @@ a {
 .nav-links {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-left: 30px;
 }
 
 .navbar-item {
-  margin: 0 10px;
   color: var(--Dark-grayish-blue);
-  text-align: center;
   transition: .2s;
-  display: block;
-  /* height: 100%; */
+  padding-top: 36px;
+  height: 100%;
 }
-
-/* .nav-links a:hover {
-  text-decoration: underline;
-  color: var(--Blue);
-} */
 
 .navbar-item:hover {
   color: var(--Black);
