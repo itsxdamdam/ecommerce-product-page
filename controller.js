@@ -3,6 +3,7 @@ const minusQuantity = document.getElementById("minus");
 const addQuantity = document.getElementById("plus");
 
 
+
 // functions
 let amount = quantity.textContent;
 
