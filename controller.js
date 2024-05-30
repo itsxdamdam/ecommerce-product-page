@@ -44,15 +44,18 @@ const updateCart = function() {
 
     cartListBody.insertAdjacentHTML(
       'afterbegin',
-      `<img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail">
-      <div>
-        <p>Fall Limited Edition Sneakers</p>
-        <p>$125.00 x ${amount} <span class="bold">$${125 * amount}.00</span></p>
+      `<div>
+        <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail">
+        <div>
+          <p>Fall Limited Edition Sneakers</p>
+          <p>$125.00 x ${amount} <span class="bold">$${125 * amount}.00</span></p>
+        </div>
+        <button id="delete">
+          <p></p>
+          <img src="./images/icon-delete.svg" alt="delete">
+        </button>
       </div>
-      <button id="delete">
-        <p></p>
-        <img src="./images/icon-delete.svg" alt="delete">
-      </button>`
+      <button id="checkout">Checkout</button>`
     )
   }
 }
