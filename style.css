@@ -104,11 +104,6 @@ body {
   position: relative;
 }
 
-#cart > img {
-  width: 30px;
-  height: 30px;
-}
-
 .cart-notification {
   position: absolute;
   top: -10px;
