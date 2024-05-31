@@ -6,9 +6,8 @@ const cartListBody = document.querySelector(".cart-body");
 const cartNotification = document.querySelector(".cart-notification")
 const addToCart = document.getElementById("addtocart");
 
-
 // functions
-let amount = 1;
+let amount = 0;
 
 const updateQuantity = function() {
   quantity.innerText = amount
@@ -31,16 +30,22 @@ addQuantity.addEventListener('click', function() {
 const defaultCart = function() {
   if(amount === 0) {
     cartList.classList.add("hidden")
-    cartListBody.textContent = "Your cart is empty"
+    const newDiv = document.createElement('div')
+    newDiv.textContent = "Your cart is empty"
+    cartListBody.appendChild(newDiv)
     cartNotification.classList.add("hidden")
   }
 }
 
 const updateCart = function() {
   if(amount > 0) {
-    const cartListBody = document.querySelector(".cart-body");
+    const cartListBody = document.querySelector(".cart-body div");
+    if(cartListBody.textContent === "Your cart is empty") {
+      cartListBody.textContent = ""
+    }
     cartListBody.classList.remove("cart-body")
     cartListBody.classList.add("cart-body-item")
+    cartNotification.textContent++
 
     cartListBody.insertAdjacentHTML(
       'afterbegin',
@@ -57,20 +62,20 @@ const updateCart = function() {
       </div>
       <button id="checkout">Checkout</button>`
     )
+    
+    const deleteIcon = document.getElementById('delete');
+    deleteIcon.addEventListener('click', function(e) {
+      const target = e.target
+      target.parentElement.parentElement.parentElement.remove()
+      cartListBody.textContent = "Your cart is empty"
+
+    })
   }
 }
 
+const renderCartView = function() {
+  defaultCart()
   updateCart()
+}
 
-
-
-// const renderCartView = function() {
-//   defaultCart()
-//   updateCart()
-// }
-
-
-// renderCartView()
-
-
-export {cartList, defaultCart };
+export {cartList, renderCartView, addToCart, cartNotification, amount, cartListBody };
