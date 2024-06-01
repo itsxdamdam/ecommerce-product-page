@@ -5,7 +5,7 @@ import { cartNotification } from "./controller.js";
 import { amount } from "./controller.js";
 import { cartListBody } from "./controller.js";
 
-const cartIcon = document.getElementById("cart")
+const cartIcon = document.querySelector(".cart-icon")
 
 // view
 const init = function() {
