@@ -29,7 +29,7 @@ addQuantity.addEventListener('click', function() {
 
 const defaultCart = function() {
   if(amount === 0) {
-    // cartList.classList.add("hidden")
+    cartList.classList.add("hidden")
     cartListBody.textContent = "Your cart is empty"
     cartNotification.classList.add("hidden")
   }
