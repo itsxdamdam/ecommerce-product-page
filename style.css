@@ -236,7 +236,8 @@ a {
   height: 100%;
 }
 
-.navbar-item:hover {
+.navbar-item:hover, 
+.nav-links .active {
   color: var(--Black);
   font-weight: 600;
   border-bottom: 3px solid var(--Orange);
@@ -266,28 +267,49 @@ main .item img {
   border-radius: 20px;
 }
 
+.thumbnail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  transition: .3s;
+}
+
+.thumbnail-1,
+.thumbnail-2,
+.thumbnail-3,
+.thumbnail-4 {
+  /* width: 100%; */
+  height: 106px;
+  border-radius: 30px;
+  transition: .3s;
+  /* border: 2px solid var(--Orange); */
+
+}
+
 main .thumbnail img {
   width: 100px;
-  height: 100px;
-  margin: 10px 15px;
+  height: 102px;
   cursor: pointer;
+  transition: .3s;
 }
 
 .thumbnail img:hover {
   opacity: 0.5;
 }
 
+
+
+.thumbnail .active {
+  border: 2px solid var(--Orange);
+}
+
 main .thumbnail img:first-child {
   margin-left: 0;
 }
 
-/* main .thumbnail img:last-child {
-  margin-right: 0;
-} */
-
 .item-details {
   width: 40%;
-  /* word-wrap: break-word; */
 }
 
 .item-details .company {
