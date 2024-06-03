@@ -5,6 +5,8 @@ const cartList = document.querySelector(".cart-list");
 const cartListBody = document.querySelector(".cart-body");
 const cartNotification = document.querySelector(".cart-notification")
 const addToCart = document.getElementById("addtocart");
+const cart = document.getElementById("cart");
+
 
 // functions
 let amount = 0;
@@ -29,7 +31,6 @@ addQuantity.addEventListener('click', function() {
 
 const defaultCart = function() {
   if(amount === 0) {
-    cartList.classList.add("hidden")
     cartListBody.textContent = "Your cart is empty"
     cartNotification.classList.add("hidden")
   }
@@ -48,7 +49,7 @@ const updateCart = function() {
 
     cartListBody.insertAdjacentHTML(
       'afterbegin',
-      `<div class="display-item">
+      `<div id="display-item">
         <div>
           <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail">
           <div>
@@ -56,7 +57,6 @@ const updateCart = function() {
             <p>$125.00 x ${amount} <span class="bold">$${125 * amount}.00</span></p>
           </div>
           <button id="delete">
-            <p></p>
             <img src="./images/icon-delete.svg" alt="delete">
           </button>
         </div>
@@ -72,8 +72,9 @@ const updateCart = function() {
 
     amount = 0;
     updateQuantity()
-    
+
     const deleteIcon = document.getElementById('delete');
+
     deleteIcon.addEventListener('click', function(e) {
       const target = e.target
       
@@ -101,4 +102,4 @@ const renderCartView = function() {
   updateCart()
 }
 
-export {cartList, renderCartView, addToCart, cartNotification, amount, cartListBody };
+export {cartList, renderCartView, addToCart, cartNotification, amount, cartListBody, cart };
