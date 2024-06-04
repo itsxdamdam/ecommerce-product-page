@@ -6,6 +6,8 @@ const cartListBody = document.querySelector(".cart-body");
 const cartNotification = document.querySelector(".cart-notification")
 const addToCart = document.getElementById("addtocart");
 const cart = document.getElementById("cart");
+const mainImage = document.querySelector(".item img")
+
 
 
 // functions
@@ -97,9 +99,13 @@ const updateCart = function() {
   }
 }
 
+
+
+
+
 const renderCartView = function() {
   defaultCart()
   updateCart()
 }
 
-export {cartList, renderCartView, addToCart, cartNotification, amount, cartListBody, cart };
+export {cartList, renderCartView, addToCart, cartNotification, amount, cartListBody, cart, mainImage };

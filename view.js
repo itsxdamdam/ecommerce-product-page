@@ -2,9 +2,17 @@ import { cartList } from "./controller.js";
 import { addToCart } from "./controller.js";
 import { renderCartView } from "./controller.js";
 import { cartNotification } from "./controller.js";
+import { mainImage } from "./controller.js";
+const thumbnail = document.querySelector(".thumbnail")
+
 import { cart } from "./controller.js";
 
 const cartIcon = document.querySelector(".cart-icon")
+const lightBox = document.querySelector(".lightbox")
+const cancel = document.querySelector(".cancel")
+
+const thumbnailItem = thumbnail.children
+
 
 // view
 const init = function() {
@@ -39,9 +47,37 @@ window.addEventListener("click", function(e) {
         }
       }
     }
-    
   }
+
+  if(e.target === lightBox) {
+    lightBox.classList.add("hidden")
+  }
+
+
+
+  // for(let i = 0; i < thumbnailItem.length; i++) {
+  //   console.log(thumbnailItem[i].children)
+  //   console.log(e.target)
+  //   if(e.target === thumbnailItem[i]) {
+  //     thumbnailItem[i].classList.add("active")
+  //     console.log("is going")
+  //   }
+
+  // }
+
+
 })
+
+mainImage.addEventListener("click", function() {
+  lightBox.classList.toggle("hidden")
+})
+
+
+cancel.addEventListener("click", function() {
+  lightBox.classList.add("hidden")
+})
+
+
 
 addToCart.addEventListener("click", function() {
   renderCartView()
