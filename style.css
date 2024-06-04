@@ -12,6 +12,9 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* colors */
@@ -198,8 +201,11 @@ button {
 }
 
 .container {
-  margin: 50px auto;
+  margin: 0px auto;
+  padding: 50px 0px;
+  height: 100%;
   width: 80%;
+  margin-bottom: 0px;
 }
 
 a {
@@ -265,6 +271,7 @@ main {
   justify-content: space-between;
   align-items: center;
   margin: 100px;
+  margin-bottom: 0px;
 }
 
 main .item img {
@@ -374,3 +381,83 @@ main .thumbnail img:first-child {
   margin-top: 50px;
 }
 
+.lightbox {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.lightbox-main {
+  width: 500px;
+  /* opacity: 1; */
+  margin: 50px auto;
+  margin-top: 200px;
+}
+
+.cancel img {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 33.5%;
+  top: 15%;
+  cursor: pointer;
+  z-index: 50;
+  transition: .2s;
+}
+
+.lightbox-main .right,
+.lightbox-main .left {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  /* padding: 5px 0px; */
+  background: var(--White);
+  position: absolute;
+  cursor: pointer;
+}
+
+.lightbox-main .left {
+  right: 32%;
+  top: 43%;
+}
+
+.lightbox-main .right {
+  left: 32%;
+  top: 43%;
+}
+
+.lightbox-main .left img,
+.lightbox-main .right img {
+  display: block;
+  margin: 10px auto;
+}
+
+.cancel img:hover, 
+.lightbox-main .right img:hover,
+.lightbox-main .left img:hover {
+  filter: invert(64%) sepia(64%) saturate(4311%) hue-rotate(348deg) brightness(106%) contrast(101%)
+}
+
+.lightbox-main .main {
+  display: block;
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  /* margin: 0px auto; */
+}
+
+.lightbox-thumbnail {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lightbox-thumbnail img {
+  width: 100px;
+  height: 102px;
+  border-radius: 20px;
+}
