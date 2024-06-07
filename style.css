@@ -209,6 +209,40 @@ a {
   text-decoration: none;
 }
 
+.hamburger-menu {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+.hamburger,
+.hamburger-menu::after,
+.hamburger-menu::before {
+  width: 60%;
+  height: 5px;
+  background: var(--Dark-grayish-blue);
+  margin: 5px 0px;
+  content: " "
+}
+
+.cancel::before {
+  display: none;
+}
+
+.cancel::after {
+  transform: rotate(45deg);
+}
+
+.cancel .hamburger {
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -233,7 +267,7 @@ a {
 }
 
 .navbar-item {
-  padding: 30px 10px;
+  padding: 40px 10px;
   color: var(--Dark-grayish-blue);
   transition: .2s;
   height: 100%;
