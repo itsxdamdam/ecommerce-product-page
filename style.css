@@ -213,7 +213,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 10%; */
   border-bottom: 2px var(--Light-grayish-blue) solid;
 }
 
@@ -251,11 +250,50 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 8%;
-  /* padding: 10px; */
 }
 
 .navbar-right .avatar{
   width: 50px;
+}
+
+.mobile-nav {
+  position: relative;
+}
+
+.mobile-nav .nav-close {
+  z-index: 500;
+  position: fixed;
+  left: 3%;
+  top: 5%;
+}
+
+.mobile-nav .navbar-left .nav-links {
+  padding-top: 20px;
+  display: block;
+  background: var(--White);
+  position: fixed;
+  z-index: 100;
+  width: 80%;
+  height: 200vh;
+  left: 0%;
+  top: 0%;
+}
+
+.mobile-nav .navbar-left .nav-links a {
+  display: block;
+  padding: 20px 0px;
+  margin: 10px 0px;
+  font-weight: 800;
+  padding: 10px;
+}
+
+.mobile-nav-link {
+  position: absolute;
+  top: 3%;
+}
+
+.mobile-nav .navbar-item {
+  height: 0%;
 }
 
 main {
@@ -461,9 +499,11 @@ main .thumbnail img:first-child {
 
   .navbar {
     padding: 10px 0px;
+    position: relative;
   }
 
-  .navbar-left .nav-links {
+  .nav-links {
+    margin-left: 0px;
     display: none;
   }
 
@@ -487,6 +527,7 @@ main .thumbnail img:first-child {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* z-index: 100; */
     /* display: none; */
   }
   
@@ -500,15 +541,15 @@ main .thumbnail img:first-child {
     content: " "
   }
   
-  .cancel::before {
+  .cancel-menu::before {
     display: none;
   }
   
-  .cancel::after {
+  .cancel-menu::after {
     transform: rotate(45deg);
   }
   
-  .cancel .hamburger {
+  .cancel-menu .hamburger {
     transform: rotate(-45deg);
     position: absolute;
   }
@@ -541,22 +582,14 @@ main .thumbnail img:first-child {
 }
 
 @media only screen and (max-width: 600px) {
-  /* .navbar > div {
-    width: 50%;
-  } */
 
   .navbar-right {
     width: 25%;
-    /* justify-content: space-around; */
   }
 
   .navbar-left {
     width: 60%;
   }
-
-  /* .logo img {
-    width: 100px;
-  } */
 
   .hamburger-menu {
     width: 70px;

@@ -3,6 +3,7 @@ import { addToCart } from "./controller.js";
 import { renderCartView } from "./controller.js";
 import { cartNotification } from "./controller.js";
 import { mainImage } from "./controller.js";
+// import { mobileNavbar } from "./main.js";
 const thumbnail = document.querySelector(".thumbnail")
 
 import { cart } from "./controller.js";
@@ -17,6 +18,7 @@ const thumbnailItem = thumbnail.children
 // view
 const init = function() {
   renderCartView()
+  // mobileNavbar()
 }
 
 init()
