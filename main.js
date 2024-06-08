@@ -7,8 +7,6 @@ hamburger.addEventListener("click", function() {
   navbar.classList.add("mobile-nav");
   navClose.classList.remove("hidden");
   bodyDark.classList.remove("hidden")
-  // body.style.backgroundColor = "rgba(0, 0, 0, 1)";
-  // body.style.zIndex = 10000
 })
 
 navClose.addEventListener("click", function() {

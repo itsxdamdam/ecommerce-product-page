@@ -176,7 +176,7 @@ body {
   font-weight: 600;
   background: var(--Orange);
   color: var(--White);
-  width: 350px;
+  width: 85%;
   padding: 10px 20px;
   display: block;
   margin: 0px auto;
@@ -507,8 +507,14 @@ main .thumbnail img:first-child {
 @media only screen and (max-width: 1024px) {
 
   .navbar {
-    padding: 10px 0px;
+    /* padding: 5px 0px; */
+    /* border-bottom: none; */
+    width: 100%;
     position: relative;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .nav-links {
@@ -525,8 +531,8 @@ main .thumbnail img:first-child {
   }
 
   main .item > img {
-    width: 300px; 
-    height: 300px;
+    width: 330px; 
+    height: 330px;
     z-index: -1000000;
   }
 
@@ -598,6 +604,10 @@ main .thumbnail img:first-child {
 
 @media only screen and (max-width: 600px) {
 
+  .navbar {
+    padding: 0px 10px ;
+  }
+
   .navbar-right {
     width: 25%;
   }
@@ -611,6 +621,11 @@ main .thumbnail img:first-child {
   }
 
   #cart .cart-list {
-    right: -90px;
+    right: -65px;
+    width: 350px;
+  }
+
+  .container {
+    margin: 0px;
   }
 }
