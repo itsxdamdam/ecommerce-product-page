@@ -30,14 +30,13 @@ cartIcon.addEventListener('click', function(e) {
 
 window.addEventListener("click", function(e) {
   const cartVisibility = cartList.classList.contains("hidden")
-
+  
   let cartListElements = [cartList]
-  cartListElements.push(...cartList.getElementsByTagName("*"))
+  cartListElements.push(...cartList.querySelectorAll("*"))
 
   if(!cartVisibility && e.target !== cartIcon) {
-
     cartList.classList.add('hidden')
-    
+
     for(let i = 0; i < cartListElements.length; i++) {
       
       if(e.target === cartListElements[i]) {

@@ -8,7 +8,7 @@ hamburger.addEventListener("click", function() {
   navbar.classList.add("mobile-nav");
   navClose.classList.remove("hidden");
   bodyDark.classList.remove("hidden")
-  hamburgerLinks.classList.add("mobile-nav-link")
+  hamburgerLinks.classList.add("mobile-nav-links")
 })
 
 navClose.addEventListener("click", function() {
