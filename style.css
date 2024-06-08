@@ -292,6 +292,10 @@ a {
   top: 3%;
 }
 
+.mobile-nav-link {
+  width: 100%;
+}
+
 .mobile-nav .navbar-item {
   height: 0%;
 }
