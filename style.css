@@ -646,4 +646,8 @@ main .thumbnail img:first-child {
   .item-details {
     width: 50%;
   }
+
+  #cart .cart-list {
+    right: -60px;
+  }
 }

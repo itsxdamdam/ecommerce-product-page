@@ -28,46 +28,46 @@ cartIcon.addEventListener('click', function(e) {
 })
 
 
-window.addEventListener("click", function(e) {
-  const cartVisibility = cartList.classList.contains("hidden")
+// window.addEventListener("click", function(e) {
+//   const cartVisibility = cartList.classList.contains("hidden")
   
-  let cartListElements = [cartList]
-  cartListElements.push(...cartList.querySelectorAll("*"))
+//   let cartListElements = [cartList]
+//   cartListElements.push(...cartList.querySelectorAll("*"))
 
-  if(!cartVisibility && e.target !== cartIcon) {
-    cartList.classList.add('hidden')
+//   if(!cartVisibility && e.target !== cartIcon) {
+//     cartList.classList.add('hidden')
 
-    for(let i = 0; i < cartListElements.length; i++) {
+//     for(let i = 0; i < cartListElements.length; i++) {
       
-      if(e.target === cartListElements[i]) {
+//       if(e.target === cartListElements[i]) {
        
-        // console.log(e.target, cartListElements[i])
+//         // console.log(e.target, cartListElements[i])
        
-        if(true) {
-          cartList.classList.remove('hidden')
-        }
-      }
-    }
-  }
+//         if(true) {
+//           cartList.classList.remove('hidden')
+//         }
+//       }
+//     }
+//   }
 
-  if(e.target === lightBox) {
-    lightBox.classList.add("hidden")
-  }
-
-
-
-  // for(let i = 0; i < thumbnailItem.length; i++) {
-  //   console.log(thumbnailItem[i].children)
-  //   console.log(e.target)
-  //   if(e.target === thumbnailItem[i]) {
-  //     thumbnailItem[i].classList.add("active")
-  //     console.log("is going")
-  //   }
-
-  // }
+//   if(e.target === lightBox) {
+//     lightBox.classList.add("hidden")
+//   }
 
 
-})
+
+//   // for(let i = 0; i < thumbnailItem.length; i++) {
+//   //   console.log(thumbnailItem[i].children)
+//   //   console.log(e.target)
+//   //   if(e.target === thumbnailItem[i]) {
+//   //     thumbnailItem[i].classList.add("active")
+//   //     console.log("is going")
+//   //   }
+
+//   // }
+
+
+// })
 
 mainImage.addEventListener("click", function() {
   lightBox.classList.toggle("hidden")

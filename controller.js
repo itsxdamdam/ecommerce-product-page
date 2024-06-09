@@ -80,7 +80,12 @@ const updateCart = function() {
     deleteIcon.addEventListener('click', function(e) {
       const target = e.target
       
-      target.parentElement.parentElement.parentElement.remove()
+      function deleteThisthing() {
+        target.parentElement.parentElement.parentElement.remove()
+      }
+
+      deleteThisthing()
+      
 
       if(cartListBody.childNodes.length === 0) {
         cartListBody.classList.add("cart-body")
