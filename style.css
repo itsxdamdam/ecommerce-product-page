@@ -158,8 +158,6 @@ body {
   to {
     opacity: 1;
   }
-
-  
 }
 
 .cart-list > p {
@@ -251,7 +249,7 @@ a {
 .navbar-left {
   display: flex;
   align-items: center;
-  width: 50%;
+  /* width: 50%; */
   height: 62px;
 }
 
@@ -296,9 +294,11 @@ a {
 
 .mobile-nav .nav-close {
   z-index: 500;
-  position: fixed;
-  left: 2%;
-  top: 5%;
+  position: absolute;
+  left: 5%;
+  top: 2%;
+
+  /* animation: hamburger-active 1s; */
 }
 
 .mobile-nav .navbar-left .nav-links {
@@ -311,6 +311,8 @@ a {
   height: 200vh;
   left: 0%;
   top: 0%;
+
+  animation: hamburger-active 1s;
 }
 
 .mobile-nav .navbar-left .nav-links a {
@@ -327,6 +329,19 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  animation: hamburger-active 1s;
+}
+
+@keyframes hamburger-active {
+  from {
+    opacity: 0;
+    transform: translate(-50%);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .mobile-nav .navbar-item {
