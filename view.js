@@ -69,8 +69,16 @@ cartIcon.addEventListener('click', function(e) {
 
 // })
 
+window.addEventListener("click", function(e) {
+    if(e.target === lightBox) {
+    lightBox.classList.add("hidden")
+  }
+})
+
 mainImage.addEventListener("click", function() {
-  lightBox.classList.toggle("hidden")
+  if(window.screen.width > 850) {
+    lightBox.classList.toggle("hidden")
+  }
 })
 
 

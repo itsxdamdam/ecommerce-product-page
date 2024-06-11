@@ -13,6 +13,8 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   /* height: 100vh; */
+  scroll-behavior: smooth;
+  /* scrollbar-width: 10px; */
   position: relative;
 }
 
@@ -544,6 +546,7 @@ main .thumbnail img:first-child {
 
   .container {
     margin: 0px;
+    height: 100%;
   }
 
   .item-details {
