@@ -257,11 +257,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 8%;
+  /* width: 8%; */
 }
 
 .navbar-right .avatar{
   width: 50px;
+  margin: 0px 15px;
 }
 
 .mobile-nav {
@@ -521,11 +522,11 @@ main .thumbnail img:first-child {
 
 /* media queries */
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 
-  /* .navbar {
-    padding: 0px 10px ;
-  } */
+  .navbar {
+    padding: 0px 10px;
+  }
 
   .navbar-right {
     width: 25%;
@@ -535,8 +536,9 @@ main .thumbnail img:first-child {
     width: 60%;
   }
 
-  .hamburger-menu {
-    width: 60px;
+  .nav-links {
+    margin-left: 0px;
+    display: none;
   }
 
   #cart .cart-list {
@@ -549,12 +551,12 @@ main .thumbnail img:first-child {
     height: 100%;
   }
 
-  .item-details {
-    /* display: none; */
+  main {
+    flex-direction: column;
   }
-}
+} */
 
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
   .navbar {
     width: 100%;
@@ -570,9 +572,9 @@ main .thumbnail img:first-child {
     display: none;
   }
 
-  .navbar-right {
-    width: 13%;
-  }
+  /* .navbar-right {
+    width: 100%;
+  } */
 
   #cart .cart-list {
     right: -60px;
@@ -593,8 +595,8 @@ main .thumbnail img:first-child {
   }
   
   .hamburger-menu {
-    height: 70px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     display: flex;
     position: relative;
     flex-direction: column;
