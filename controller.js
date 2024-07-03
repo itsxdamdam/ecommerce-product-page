@@ -32,10 +32,10 @@ addQuantity.addEventListener('click', function() {
 })
 
 const defaultCart = function() {
-  if(amount === 0) {
+  // if(amount === 0) {
     cartListBody.textContent = "Your cart is empty"
     cartNotification.classList.add("hidden")
-  }
+  // }
 }
 
 const updateCart = function() {
@@ -113,4 +113,4 @@ const renderCartView = function() {
   updateCart()
 }
 
-export {cartList, renderCartView, addToCart, cartNotification, amount, cartListBody, cart, mainImage };
+export {cartList, renderCartView, updateCart, addToCart, cartNotification, amount, cartListBody, cart, mainImage };

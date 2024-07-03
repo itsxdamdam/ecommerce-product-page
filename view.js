@@ -1,12 +1,9 @@
-import { cartList } from "./controller.js";
-import { addToCart } from "./controller.js";
-import { renderCartView } from "./controller.js";
-import { cartNotification } from "./controller.js";
-import { mainImage } from "./controller.js";
-// import { mobileNavbar } from "./main.js";
+import { 
+  cartList, updateCart, 
+  addToCart, mainImage, 
+  renderCartView, cartNotification 
+} from "./controller.js";
 const thumbnail = document.querySelector(".thumbnail")
-
-import { cart } from "./controller.js";
 
 const cartIcon = document.querySelector(".cart-icon")
 const lightBox = document.querySelector(".lightbox")
@@ -89,6 +86,6 @@ cancel.addEventListener("click", function() {
 
 
 addToCart.addEventListener("click", function() {
-  renderCartView()
+  updateCart()
   cartNotification.classList.remove("hidden")  
 })
